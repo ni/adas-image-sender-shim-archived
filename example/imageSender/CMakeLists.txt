@@ -37,7 +37,7 @@ if(Boost_FOUND)
         )
     else()
         set_target_properties(IMAGE_SENDER PROPERTIES 
-            IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/ImageSender/windows/ImageSenderLib/libimageSender.so" 
+            IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/ImageSender/linux/ImageSenderLib/libimageSender.so" 
         )
     endif()
 
