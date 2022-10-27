@@ -21,7 +21,7 @@ set(HEADERS source)
 file(GLOB_RECURSE SOURCE source/main.cpp)
 
 include_directories(${HEADERS})
-include_directories(include)
+include_directories(ImageSender/includes)
 
 add_executable(ImageSenderDemo ${SOURCE})
 
@@ -33,14 +33,11 @@ if(Boost_FOUND)
 
     if(WIN32) 
         set_target_properties(IMAGE_SENDER PROPERTIES 
-            IMPORTED_IMPLIB "${CMAKE_CURRENT_SOURCE_DIR}/lib/imageSender/win/release/imageSender.lib" 
-            IMPORTED_IMPLIB_DEBUG "${CMAKE_CURRENT_SOURCE_DIR}/lib/imageSender/win/debug/imageSender.lib"
+            IMPORTED_IMPLIB "${CMAKE_CURRENT_SOURCE_DIR}/ImageSender/windows/ImageSenderLib/imageSender.lib" 
         )
     else()
-        
-        set_target_properties(IMAGE_SENDER 
-            PROPERTIES IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/lib/imageSender/linux/release/libimageSender.so.22.0.0" 
-            IMPORTED_LOCATION_DEBUG "${CMAKE_CURRENT_SOURCE_DIR}/lib/imageSender/linux/debug/libimageSender.so.22.0.0"
+        set_target_properties(IMAGE_SENDER PROPERTIES 
+            IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/ImageSender/windows/ImageSenderLib/libimageSender.so" 
         )
     endif()
 

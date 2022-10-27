@@ -1,6 +1,6 @@
 #pragma once
 
-#include <imageSender/imageSenderDll.h>
+#include <imageSenderDll.h>
 #include "ImageMetaData.h"
 
 #define IMAGE_SENDER_THROW_IF_FATAL(code, ...)       \

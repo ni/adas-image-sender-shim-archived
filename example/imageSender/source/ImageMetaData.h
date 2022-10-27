@@ -2,7 +2,7 @@
 
 #include <vector>
 #include "ImageStreamStructures.h"
-#include <imageSender/imageSenderDll.h>
+#include <imageSenderDll.h>
 
 struct EmbeddedDataLineInternal {
     uint8_t mipiDataType;
