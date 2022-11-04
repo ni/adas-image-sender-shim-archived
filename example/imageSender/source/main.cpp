@@ -116,6 +116,9 @@ int main(int argc, char** argv) {
         }
 
         session.Close();
+        
+        std::cout << std::endl << std::endl;
+        std::cout << "Total Frames: " << totalFramesProcessed << std::endl;
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
