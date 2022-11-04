@@ -7,7 +7,8 @@
     {                                                \
         auto capturedCode = (code);                  \
         if(capturedCode != 0) {                      \
-            std::cerr << capturedCode << std::endl;  \
+            /* TODO: refine error description */     \
+            throw std::runtime_error("Image sender error with code: " + std::to_string(code));  \
         }                                            \
     } \
 

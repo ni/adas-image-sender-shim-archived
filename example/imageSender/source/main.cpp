@@ -27,8 +27,8 @@ int main(int argc, char** argv) {
             ("help",     "produce help message")
             ("width", boost::program_options::value<int>(&inputProps.width), "Specify the width of the image")
             ("height", boost::program_options::value<int>(&inputProps.height), "Specify the height of the image")
-            ("localAddress", boost::program_options::value<std::string>(&localAddress), "Specify the local RDMA IP address to listen on")
-            ("localPort", boost::program_options::value<uint16_t>(&localPort), "Specify the local RDMA port number to listen on")
+            ("localAddress", boost::program_options::value<std::string>(&localAddress)->required(), "Specify the local RDMA IP address to listen on")
+            ("localPort", boost::program_options::value<uint16_t>(&localPort)->required(), "Specify the local RDMA port number to listen on")
             ("backChannelPort", boost::program_options::value<uint16_t>(&backChannelPort), "Specify the local RDMA port number to listen on for backchannel commands")
             ("rdmaChunkSize", boost::program_options::value<int>(&rdmaChunkSize), "RDMA sender chunk size (default 1MB)")
             ("preEmbeddedDataLineCount", boost::program_options::value<int>(&preEmbeddedDataLineCount), "Pre-embedded data line count")
@@ -77,7 +77,7 @@ int main(int argc, char** argv) {
 
         session.Create(inputProps, outputProps, rdmaProps);
         std::cout << "Waiting for RDMA connection ..." << std::endl;
-        session.AcceptConnection(30000);
+        session.AcceptConnection(-1);
         
         // Construct embedded data
         std::vector<EmbeddedDataLineInternal> preEmbeddedDataLines(outputProps.preEmbeddedDataLineCount);
@@ -116,6 +116,9 @@ int main(int argc, char** argv) {
         }
 
         session.Close();
+        
+        std::cout << std::endl << std::endl;
+        std::cout << "Total Frames: " << totalFramesProcessed << std::endl;
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
