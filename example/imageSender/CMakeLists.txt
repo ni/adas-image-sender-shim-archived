@@ -6,12 +6,10 @@ enable_testing()
 
 set(cmake_exe_com)
 
-if (WIN32)
-    set(Boost_USE_STATIC_LIBS ON)
-else()
-    set(GCC_COVERAGE_COMPILE_FLAGS  "-fPIC")
-    set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
-    set(GCC_COVERAGE_LINK_FLAGS     "-shared")
+set(Boost_USE_STATIC_LIBS ON)
+
+if (NOT WIN32)
+    set(GCC_COVERAGE_LINK_FLAGS     "-Wl,--allow-shlib-undefined")
     set(CMAKE_EXE_LINKER_FLAGS      "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
 endif()
 
