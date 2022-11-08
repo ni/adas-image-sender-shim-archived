@@ -4,7 +4,7 @@
 Sample Video Generator
 
 1. requirements:
-    --> Python3.x
+    --> Python3.5 or above
     --> FFMPEG executable
 
 2. example:
