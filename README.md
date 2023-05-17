@@ -1,2 +1,2 @@
-# ADAS Replay HIL Image Shim
-This repo is to distribute ADAS Replay HIL image sender shim binaries.
+# ADAS Replay HIL Simulator SDK
+This repo is to provide support and documentation on how to integrate simulators into the ADAS Replay HIL ofering.  It also will serve as the mechanism for distribution of binaries and test code.
