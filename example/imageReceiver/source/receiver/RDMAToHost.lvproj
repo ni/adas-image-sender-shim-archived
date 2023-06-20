@@ -39,6 +39,8 @@ Refer to the block diagram of the Host VI for each example to view the execution
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="RDMAtoHostDisplay.vi" Type="VI" URL="../RDMAtoHostDisplay.vi"/>
+		<Item Name="SendBackChannelMetadataTrigger.vi" Type="VI" URL="../SendBackChannelMetadataTrigger.vi"/>
+		<Item Name="SendBackChannelTrigger.vi" Type="VI" URL="../SendBackChannelTrigger.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="RDMA Direction.ctl" Type="VI" URL="/&lt;vilib&gt;/rdma/rdma.llb/RDMA Direction.ctl"/>
@@ -88,14 +90,20 @@ Refer to the block diagram of the Host VI for each example to view the execution
 			<Item Name="nirdma.dll" Type="Document" URL="nirdma.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="PixelFormat.ctl" Type="VI" URL="../../../utility/decodeToImage/PixelFormat.ctl"/>
-			<Item Name="DecodeImageArray.vi" Type="VI" URL="../../../utility/decodeToImage/DecodeImageArray.vi"/>
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="ConfigureBackChannel.vi" Type="VI" URL="../ConfigureBackChannel.vi"/>
-			<Item Name="SendBackChannelTrigger.vi" Type="VI" URL="../SendBackChannelTrigger.vi"/>
 			<Item Name="SerializeEmbeddedDataLines.vi" Type="VI" URL="../SerializeEmbeddedDataLines.vi"/>
+			<Item Name="PixelFormat.ctl" Type="VI" URL="../../utility/decodeToImage/PixelFormat.ctl"/>
+			<Item Name="DecodeImageArray.vi" Type="VI" URL="../../utility/decodeToImage/DecodeImageArray.vi"/>
+			<Item Name="SubVI_StopDecoder.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_StopDecoder.vi"/>
+			<Item Name="SubVI_StartDecoder2.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_StartDecoder2.vi"/>
+			<Item Name="bayer_decode.ctl" Type="VI" URL="../../utility/decodeToImage/bayer_decode.ctl"/>
+			<Item Name="SubVI_CreateDecoder.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_CreateDecoder.vi"/>
+			<Item Name="niimaqdx.dll" Type="Document" URL="niimaqdx.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
