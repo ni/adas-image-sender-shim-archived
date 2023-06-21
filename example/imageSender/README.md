@@ -7,6 +7,9 @@ ImageSender allows the users to parse the image from any source like recorded fi
 - Boost
 - Visual Studio Code
 - RDMA Mellanox Driver https://network.nvidia.com/products/adapter-software/ethernet/windows/winof-2/
+- NI RDMA Driver
+- LabVIEW RunTime Engine 2021
+- NI IMAQdx
 
 # Hardware Requirement
 - PC with Mellanox RDMA Card
@@ -247,15 +250,15 @@ Waiting for RDMA connection ...
 
 - Image Receiver
 
-1. From LabVIEW Project https://github.com/ni/adas-replay-hil-simulator-sdk/tree/main/example/imageReceiver/source/receiver open RDMAToHostDisplay.vi
+1. A LabVIEW application built as executable for both Windows and Linux from this LabVIEW Project https://github.com/ni/adas-replay-hil-simulator-sdk/tree/main/example/imageReceiver/source/receiver 
    
- ![image](https://github.com/ni/adas-replay-hil-simulator-sdk/assets/95634231/f99e9880-fcfb-4d16-8375-edf05052b957)
 
-2. Confugre the connection with the RDMA Sender
+2. Configure the connection with the RDMA Sender , ```remoteAddress``` is the IP address for RDMA imageSender , ```remotePort``` is the avaliable port for the RDMA ImageSender , ```remoteBackChannelPort``` is the avaliable port  RDMA ImageSender , ```localAddress``` is the IP address for the RDMA imageReceiver , ``` Width , Height ``` is the image resolution from the ImageSender , ```Pixel Format``` is the image type and it should match the image type from the ImageSender
 
 ![image](https://github.com/ni/adas-replay-hil-simulator-sdk/assets/95634231/93d306b7-0524-444a-a025-3398fdf79884)
 
-3. Run the VI , The image sent from the RDMA sender will displayed on the RDMA Receiver
+3. Click on ```Start``` , The image sent from the RDMA sender will displayed on the RDMA Receiver
 
-![image](https://github.com/ni/adas-replay-hil-simulator-sdk/assets/95634231/def28d80-2bce-424c-887c-a7d55e6c4a94)
+![image](https://github.com/ni/adas-replay-hil-simulator-sdk/assets/95634231/19036467-8079-4991-ad2d-141f431ec2b8)
+
 
