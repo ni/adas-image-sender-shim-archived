@@ -86,6 +86,7 @@ Refer to the block diagram of the Host VI for each example to view the execution
 				<Item Name="RDMA Acquire Send Buffer U16.vi" Type="VI" URL="/&lt;vilib&gt;/rdma/rdma.llb/RDMA Acquire Send Buffer U16.vi"/>
 				<Item Name="RDMA Acquire Send Buffer U32.vi" Type="VI" URL="/&lt;vilib&gt;/rdma/rdma.llb/RDMA Acquire Send Buffer U32.vi"/>
 				<Item Name="RDMA Acquire Send Buffer U64.vi" Type="VI" URL="/&lt;vilib&gt;/rdma/rdma.llb/RDMA Acquire Send Buffer U64.vi"/>
+				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 			</Item>
 			<Item Name="nirdma.dll" Type="Document" URL="nirdma.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -95,15 +96,10 @@ Refer to the block diagram of the Host VI for each example to view the execution
 			</Item>
 			<Item Name="ConfigureBackChannel.vi" Type="VI" URL="../ConfigureBackChannel.vi"/>
 			<Item Name="SerializeEmbeddedDataLines.vi" Type="VI" URL="../SerializeEmbeddedDataLines.vi"/>
-			<Item Name="PixelFormat.ctl" Type="VI" URL="../../utility/decodeToImage/PixelFormat.ctl"/>
-			<Item Name="DecodeImageArray.vi" Type="VI" URL="../../utility/decodeToImage/DecodeImageArray.vi"/>
-			<Item Name="SubVI_StopDecoder.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_StopDecoder.vi"/>
-			<Item Name="SubVI_StartDecoder2.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_StartDecoder2.vi"/>
-			<Item Name="bayer_decode.ctl" Type="VI" URL="../../utility/decodeToImage/bayer_decode.ctl"/>
-			<Item Name="SubVI_CreateDecoder.vi" Type="VI" URL="../../utility/decodeToImage/SubVI_CreateDecoder.vi"/>
 			<Item Name="niimaqdx.dll" Type="Document" URL="niimaqdx.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="DecodetoImage.lvlib" Type="Library" URL="../../utility/decodeToImage/DecodetoImage.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
